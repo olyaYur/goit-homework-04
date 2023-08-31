@@ -48,6 +48,7 @@ button {
     --white-color:#FFFFFF;
     --ocean-color:#404BBF;
     --cloud-color:#F4F4FD;
+    --light-slate-color: #8E8F99;
 
 }
 
@@ -97,7 +98,7 @@ button {
 
 .page-header {
 border-bottom: 1px solid #e7e9fc;
-padding: 24px 0;
+/*padding: 24px 0;*/ 
 }
 
 .page-header-container {
@@ -124,7 +125,22 @@ padding: 24px 0;
     font-weight: 500;
     color: var(--navyblue-color);
     padding: 24px 0;
+    display: block;
 }
+
+.menu-item .is-active {
+    color: var(--ocean-color);
+}
+
+.menu-item-decor::after {
+    width: 48px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--ocean-color);
+    content: "";
+    display: block;
+}
+
 
 .menu-list .menu-item-link:hover,
 .menu-list .menu-item-link:focus {
@@ -163,6 +179,16 @@ padding: 24px 0;
 
 /* section hero*/
 .segment-hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+    ), 
+
+    
+    url(../images/people-office-min.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
     background-color: var(--navyblue-color);
     padding-top: 188px;
     padding-bottom: 188px;
@@ -215,7 +241,7 @@ padding: 24px 0;
 }
 
 .name-value-container {
-    padding: 32px 0;
+    padding: 32px 16px;
 }
 
 .our-team-title {
@@ -225,8 +251,19 @@ padding: 24px 0;
 
 .our-team-text {
     text-align: center;
+    margin-bottom: 8px;
 }
 
+.social-list-our-team {  
+    gap: 24px;
+}
+
+.our-advantages-icon {
+    padding: 24px 100px;
+    border-radius: 4px;
+    border: 1px solid var(--light-slate-color);
+    background-color: var(--cloud-color);
+}
 
 /*button*/
 .btn-hero {
@@ -299,4 +336,39 @@ padding: 24px 0;
 .logotype-link-footer {
     display: inline-block;
     margin-bottom: 16px;
+}
+
+.page-footer-container {
+    display: flex;
+    gap: 120px;  
+}
+
+.social-list {
+    display: inline-flex;
+}
+
+.social-list-footer {  
+    gap: 16px;
+}
+
+
+
+.social-link  {
+   font-size: 0px; 
+}
+
+.social-item {
+    background-color: var(--iris-color);
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-social-text {
+font-weight: 500;
+color: var(--white-color);
+margin-bottom: 16px;
 }
