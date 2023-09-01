@@ -99,7 +99,7 @@ button {
 
 .page-header {
 border-bottom: 1px solid #e7e9fc;
-/*padding: 24px 0;*/ 
+box-shadow:  0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .page-header-container {
@@ -141,15 +141,18 @@ border-bottom: 1px solid #e7e9fc;
 
 .menu-item .is-active {
     color: var(--ocean-color);
+    position: relative; /*it was mistake*/
 }
 
-.menu-item-decor::after {
+.menu-item .is-active::after {
     width: 48px;
     height: 4px;
     border-radius: 2px;
     background-color: var(--ocean-color);
     content: "";
-    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -1px;  /*it was mistake*/ 
 }
 
 .main-navigation {
@@ -263,7 +266,7 @@ border-bottom: 1px solid #e7e9fc;
 
 
 .name-value-container {
-    padding: 32px 16px;
+    padding: 32px 0;
 }
 
 .our-team-title {
@@ -288,6 +291,10 @@ border-bottom: 1px solid #e7e9fc;
  .social-link-our-team:hover,
  .social-link-our-team:focus {
     background-color: var(--ocean-color);
+  }
+
+  .icon-our-team {
+    fill: var(--cloud-color);
   }
 
 /*button*/
@@ -409,6 +416,7 @@ border-bottom: 1px solid #e7e9fc;
 
 .social-list {
     display: flex;
+    justify-content: center;
 }
 
 .social-list-footer {  
@@ -421,7 +429,7 @@ border-bottom: 1px solid #e7e9fc;
    font-size: 0px;
    width: 100%;
    height: 100%;
-   border-radius: 20px;
+   border-radius: 50%;
    display: flex;
    justify-content: center;
    align-items: center;
