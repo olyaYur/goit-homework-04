@@ -49,6 +49,7 @@ button {
     --ocean-color:#404BBF;
     --cloud-color:#F4F4FD;
     --light-slate-color: #8E8F99;
+    --green-color: #31D0AA;
 
 }
 
@@ -104,6 +105,7 @@ border-bottom: 1px solid #e7e9fc;
 .page-header-container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
        /* logo*/
 .logotype-text-link {
@@ -126,7 +128,16 @@ border-bottom: 1px solid #e7e9fc;
     color: var(--navyblue-color);
     padding: 24px 0;
     display: block;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.menu-list .menu-item-link:hover,
+.menu-list .menu-item-link:focus {
+    color: var(--ocean-color);    /* it was mistake*/
+}
+
+
 
 .menu-item .is-active {
     color: var(--ocean-color);
@@ -139,12 +150,6 @@ border-bottom: 1px solid #e7e9fc;
     background-color: var(--ocean-color);
     content: "";
     display: block;
-}
-
-
-.menu-list .menu-item-link:hover,
-.menu-list .menu-item-link:focus {
-    color: var(--ocean-color);    /* it was mistake*/
 }
 
 .main-navigation {
@@ -164,6 +169,8 @@ border-bottom: 1px solid #e7e9fc;
     
 .page-contacts .contacts-item-link {
     color: var(--slate-color);
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .page-contacts .contacts-item-link:hover,
@@ -219,9 +226,15 @@ border-bottom: 1px solid #e7e9fc;
 }
 
 .advantages-item-title {
-    margin-bottom: 8px;
+    margin: 8px 0;
 }
 
+.our-advantages-icon {
+    padding: 24px 100px;
+    border-radius: 4px;
+    border: 1px solid var(--light-slate-color);
+    background-color: var(--cloud-color);
+}
 
 /* section our team */
 .segment-our-team {
@@ -258,12 +271,15 @@ border-bottom: 1px solid #e7e9fc;
     gap: 24px;
 }
 
-.our-advantages-icon {
-    padding: 24px 100px;
-    border-radius: 4px;
-    border: 1px solid var(--light-slate-color);
-    background-color: var(--cloud-color);
+.social-item-our-team {
+  background-color: var(--iris-color);  
+  transition:  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.social-item-our-team:hover {
+    background-color: var(--ocean-color);
+}
+
 
 /*button*/
 .btn-hero {
@@ -278,6 +294,8 @@ border-bottom: 1px solid #e7e9fc;
     display: block;
     min-width: 169px;
     margin: 0 auto;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-hero:hover,
@@ -316,6 +334,32 @@ border-bottom: 1px solid #e7e9fc;
 
 .app-name-category-title {
     margin-bottom: 8px;
+}
+
+.our-portfolio-item-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.our-portfolio-item-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--iris-color);
+
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.our-portfolio-item:hover .our-portfolio-item-overlay {
+    transform: translateY(0%);
+} 
+
+.text-our-portfolio-overlay {
+    padding: 40px 32px;
+    color: var(--cloud-color);
 }
 
 /*page footer*/
@@ -358,7 +402,6 @@ border-bottom: 1px solid #e7e9fc;
 }
 
 .social-item {
-    background-color: var(--iris-color);
     border-radius: 20px;
     width: 40px;
     height: 40px;
@@ -366,6 +409,17 @@ border-bottom: 1px solid #e7e9fc;
     justify-content: center;
     align-items: center;
 }
+
+.social-item-footer {
+   background-color: var(--iris-color);
+
+   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-item-footer:hover {
+    background-color: var(--green-color);
+    
+ }
 
 .footer-social-text {
 font-weight: 500;
